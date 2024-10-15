@@ -895,7 +895,7 @@ function limparFormulario() {
 
 async function fetchData(filters = {}) {
     try {
-        const baseURL = 'https://script.google.com/macros/s/AKfycbx6BapyrViRbesWfb561rVIfVS2b2sXq8z7ZWOVEnp8siOWlTvPlAnPhP0Oc4mzQN7AMg/exec';
+        const baseURL = 'https://script.google.com/macros/s/AKfycbx3vgIbDztrWiAcwrlQiFNhCjJ_aYQvzulcRo0MCT3oOK9S-r-osWxd2HSZKYsTVzJ3/exec';
         const url = new URL(baseURL);
 	showModal('modal-buscando')
         Object.keys(filters).forEach(key => {
@@ -1073,7 +1073,7 @@ const data = {
     ...dependentesData
 };
 
-    fetch('https://script.google.com/macros/s/AKfycbx6BapyrViRbesWfb561rVIfVS2b2sXq8z7ZWOVEnp8siOWlTvPlAnPhP0Oc4mzQN7AMg/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbx3vgIbDztrWiAcwrlQiFNhCjJ_aYQvzulcRo0MCT3oOK9S-r-osWxd2HSZKYsTVzJ3/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -1107,7 +1107,7 @@ async function editClient(idPrincipal) {
     showSection('form-section');
     
     try {
-        const response = await fetch(`https://script.google.com/macros/s/AKfycbx6BapyrViRbesWfb561rVIfVS2b2sXq8z7ZWOVEnp8siOWlTvPlAnPhP0Oc4mzQN7AMg/exec?idPrincipal=${idPrincipal}`);
+        const response = await fetch(`https://script.google.com/macros/s/AKfycbx3vgIbDztrWiAcwrlQiFNhCjJ_aYQvzulcRo0MCT3oOK9S-r-osWxd2HSZKYsTVzJ3/exec?idPrincipal=${idPrincipal}`);
         const data = await response.json();
         
         if (data.length > 1) {
@@ -1202,7 +1202,7 @@ async function handleCancelarCliente(idPrincipal) {
     try {
         
         // Faz a requisição GET para buscar os dados do cliente
-        const response = await fetch(`https://script.google.com/macros/s/AKfycbx6BapyrViRbesWfb561rVIfVS2b2sXq8z7ZWOVEnp8siOWlTvPlAnPhP0Oc4mzQN7AMg/exec?idPrincipal=${idPrincipal}`);
+        const response = await fetch(`https://script.google.com/macros/s/AKfycbx3vgIbDztrWiAcwrlQiFNhCjJ_aYQvzulcRo0MCT3oOK9S-r-osWxd2HSZKYsTVzJ3/exec?idPrincipal=${idPrincipal}`);
         const data = await response.json();
         if (data.length > 1) {
 
@@ -1291,7 +1291,7 @@ const operadoraValue = clientData[headers.indexOf('OPERADORA')] || '';
            const confirmacao = true
 
             if (confirmacao) {
-                fetch('https://script.google.com/macros/s/AKfycbx6BapyrViRbesWfb561rVIfVS2b2sXq8z7ZWOVEnp8siOWlTvPlAnPhP0Oc4mzQN7AMg/exec', {
+                fetch('https://script.google.com/macros/s/AKfycbx3vgIbDztrWiAcwrlQiFNhCjJ_aYQvzulcRo0MCT3oOK9S-r-osWxd2HSZKYsTVzJ3/exec', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
